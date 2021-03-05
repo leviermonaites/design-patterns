@@ -3,10 +3,12 @@ import BMW from './Brands/BMW.js';
 import Ferrari from './Brands/Ferrari.js';
 
 // See, it's just a class with only one method, that based on the condition creates the desired class.
-// It's the main purpose.
 
 class CarFactory {
   constructor(brand, year) {
+    return this.build(brand, year);
+  }
+  build(brand, year) {
     switch (brand) {
       case 'Mercedes': {
         return new Mercedes(year);
